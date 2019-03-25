@@ -1,0 +1,21 @@
+version: '3'
+services:
+  web:
+    image: mcantillana/django_unab
+    command: python manage.py runserver 0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8091:8000"
+    # depends_on:
+    #   - db
+    # environment:
+    #   DB_USER: 'django_user'
+    #   DB_PASSWORD: '1234'
+    #   DB_NAME: 'django_db'
+  # db:
+  #   image: mysql/mysql-server:5.7
+  #   environment:
+  #     MYSQL_DATABASE: django_db
+  #     MYSQL_USER: django_user
+  #     MYSQL_PASSWORD: 1234
