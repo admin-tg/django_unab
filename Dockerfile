@@ -13,7 +13,18 @@ RUN apk add --update \
     mariadb-dev \
     wget \
     libxslt-dev \
-    xmlsec-dev 
+    xmlsec-dev \
+    # Pillow dependencies
+    jpeg-dev \
+    zlib-dev \
+    freetype-dev \
+    lcms2-dev \
+    openjpeg-dev \
+    tiff-dev \
+    tk-dev \
+    tcl-dev \
+    harfbuzz-dev \
+    fribidi-dev
 # Install requirements
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
